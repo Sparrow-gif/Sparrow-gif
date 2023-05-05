@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+   <title>  </title>
+   <style>
+       @import 'https://fonts.googleapis.com/css?family=Lily+Script+One';
+body {
+  background: #eee;
+  font-family: 'Lily Script One';
+  text-transform:uppercase;
+}
+
+.card {
+  padding:5px 0px 20px 0px;
+  top: 50%;
+  left: 50%;
+  width:60%;
+  height: 300px;
+  margin: 0 auto;
+  perspective: 500px;
+  cursor:pointer;
+  justify-content:space-arround;
+}
+
+.content {
+  
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+
+  transition: transform 2s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .content {transform: rotateY( 180deg ) ;
+  transition: transform 2s;
+}
+
+.front {
+  position: absolute;
+  height: 200px;
+  width: 100%;
+  background: white;
+  color: #03446A;
+  font-size:30px;
+  text-align: center;
+  border-radius:50%;
+  backface-visibility: hidden;
+  overflow:scroll;
+}
+
+.back {
+  text-transform:capitalize;
+  background: #03446A;
+  color: white;
+  transform: rotateY( 180deg );
+  position: absolute;
+  height:100%;
+  width: 100%;
+  line-height:30px;
+  background: #03446A ;
+  color: white;
+  text-align: center;
+  border-radius:0px;
+  backface-visibility: hidden;
+}
+.name{
+       position:absolute;
+       top:75%;
+       float:right;
+       font-size:30px;
+       padding:0px 0px 0px 20px;
+       margin:0 auto;
+      }
+  
+      #myBtn {
+  display: none; 
+  position: fixed; 
+  bottom: 20px;  
+  right: 30px; 
+  z-index: 99; 
+  border: none;
+  outline: none; 
+  background-color: midnightblue; 
+  color: white; 
+  cursor: pointer; 
+  padding: 15px; 
+  border-radius: 10px; 
+  font-size: 18px; 
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+     
+
+   @media only screen and (min-width: 480px) {
+         body {
+            background: ;
+            width:auto;
+           display:flex;
+           flex-wrap:wrap;
+           justify-content:center;
+           align-items:center;
+           Flex-direction:row;
+         }
+       .card {
+           width:30% ;
+           
+            }
+      }
+   
+  </style>
+</head>
+<body>
+      <div class="card">   <!-----Image 1------>
+  <div class="content">
+    <div class="front">
+       <img src="som.jpg" style="line-height:200px;height:200px;">   <br>
+       
+    </div>
+
+    <div class="name"> Somnath pal  </div>
+    <div class="back">
+      F.Name:-Bibhasish Pal <br>
+      M.Name :-Chandana Pal  <br>
+      DOB:-06/10/2003  <br>
+       vill:- Gourgram   <br>
+      P.o:- Bandhgora    <br>
+      Dist:-Jhargram <br>
+      Pin:- 721514   <br>
+      Last Qualification:- Graduation<br>
+      Contact No:-9800757173  <br>
+      Email Id:-pal116719@gmail.com   <br>
+      <span style="color:aqua;">Skill:-</span> Html,Css,Javascript <br> MS Word,Excle,PowerPoint,Tally.
+    </div>
+  </div>
+ </div>
+
+      
+
+      
+       <button onclick="topFunction()" id="myBtn" title="Go to top"> TOP </button>
+
+       <script>
+             // Get the button:
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+       </script>
+</body>
+</html>
